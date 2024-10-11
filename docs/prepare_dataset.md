@@ -14,12 +14,14 @@ unzip can_bus.zip
 ```
 
 **AutoDL version**
+Note: Please ensure that your device has at least 500GB of free space.
 ```
 unzip -d /root/autodl-tmp/BEVFormer/data /root/autodl-pub/nuScenes/CANbusexpansion/can_bus.zip
 tar -zxvf /root/autodl-pub/nuScenes/Fulldatasetv1.0/Test/v1.0-test_blobs.tgz -C /root/autodl-tmp/BEVFormer/data/nuscenes
 tar -zxvf /root/autodl-pub/nuScenes/Fulldatasetv1.0/Test/v1.0-test_meta.tar -C /root/autodl-tmp/BEVFormer/data/nuscenes
 cd /root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval
 for tar in *.tgz;  do tar xzvf $tar -C /root/autodl-tmp/BEVFormer/data/nuscenes; done
+export PYTHONPATH="/root/autodl-tmp/BEVFormer":$PYTHONPATH
 ```
 
 **Prepare nuScenes data**
