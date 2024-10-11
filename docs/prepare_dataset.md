@@ -14,6 +14,7 @@ unzip can_bus.zip
 ```
 
 **AutoDL version**
+
 Note: Please ensure that your device has at least 500GB of free space.
 ```
 unzip -d /root/autodl-tmp/BEVFormer/data /root/autodl-pub/nuScenes/CANbusexpansion/can_bus.zip
