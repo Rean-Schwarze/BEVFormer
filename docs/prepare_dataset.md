@@ -1,7 +1,9 @@
 
 
 ## NuScenes
-Download nuScenes V1.0 full dataset data  and CAN bus expansion data [HERE](https://www.nuscenes.org/download). Prepare nuscenes data by running
+Download nuScenes V1.0 full dataset data and CAN bus expansion data [HERE](https://www.nuscenes.org/download). Prepare nuscenes data by running
+
+If you use AutoDL, you needn't download.
 
 
 **Download CAN bus expansion**
@@ -9,6 +11,15 @@ Download nuScenes V1.0 full dataset data  and CAN bus expansion data [HERE](http
 # download 'can_bus.zip'
 unzip can_bus.zip 
 # move can_bus to data dir
+```
+
+**AutoDL version**
+```
+unzip -d /root/autodl-tmp/BEVFormer/data /root/autodl-pub/nuScenes/CANbusexpansion/can_bus.zip
+tar -zxvf /root/autodl-pub/nuScenes/Fulldatasetv1.0/Test/v1.0-test_blobs.tgz -C /root/autodl-tmp/BEVFormer/data/nuscenes
+tar -zxvf /root/autodl-pub/nuScenes/Fulldatasetv1.0/Test/v1.0-test_meta.tar -C /root/autodl-tmp/BEVFormer/data/nuscenes
+cd /root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval
+for tar in *.tgz;  do tar xzvf $tar -C /root/autodl-tmp/BEVFormer/data/nuscenes; done
 ```
 
 **Prepare nuScenes data**
