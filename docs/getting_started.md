@@ -4,12 +4,16 @@
 
 # Train and Test
 
-Train BEVFormer with 8 GPUs 
+## Train BEVFormer with 8 GPUs 
 ```
 ./tools/dist_train.sh ./projects/configs/bevformer/bevformer_base.py 8
 ```
 
-Eval BEVFormer with 8 GPUs
+Note 1: Our default setting requires at least **28000M** GPU memory.
+
+Note 2: Base 使用 A100(80GB)*8 大约需要训练56个小时
+
+## Eval BEVFormer with 8 GPUs
 ```
 ./tools/dist_test.sh ./projects/configs/bevformer/bevformer_base.py ./path/to/ckpts.pth 8
 ```
